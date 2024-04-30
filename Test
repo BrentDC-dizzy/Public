@@ -1,1 +1,31 @@
-Test
+import java.util.Scanner;
+public class GetMinMax {
+ public static void main(String[] args){
+    Scanner in = new Scanner(System.in);
+    int n1, n2, high, low;
+    
+    System.out.println("Higher and Lower Number Comparison");
+    
+    System.out.println ("Enter n1: ");
+    n1=in.nextInt();
+    
+    System.out.println ("Enter n2: ");
+    n2=in.nextInt();
+    
+    high=0;
+    low=0;
+    
+    if (n1 > n2)
+    high = n1;
+    else
+    high=n2;
+    
+    if (n1>n2)
+    low=n2;
+    else
+    low=n1;
+    
+    System.out.println("Higher number is " + high);
+    System.out.println("Lower number is " + low);
+ }
+}
