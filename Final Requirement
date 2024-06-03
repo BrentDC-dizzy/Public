@@ -1,0 +1,46 @@
+
+/**
+ * Programming Final Requirement
+ *
+ * Brent Gabriel De Castro
+ * 23/04/2024
+ */
+import java.math.BigDecimal;
+import java.util.Scanner;
+
+public class PowerCalc {
+    //Main method
+    public static void main(String[] args) {
+        //Initialize Scanner
+        Scanner in = new Scanner(System.in);
+        
+        //Header
+        System.out.println("Power of a Number Calculator\n");
+        
+        //Prompt the user for input
+        System.out.print("Enter a Number: ");
+      
+        //Best Practice: I used "n" for number and "exp" for exponent as variables for conciseness and efficiency
+        //Initialize the variable and store as BigDecimal
+        BigDecimal n = in.nextBigDecimal();
+        
+        System.out.print("Enter the Exponent: ");
+        //Initialize the exponent and store as an integer
+        BigDecimal exp = in.nextBigDecimal();
+        
+        //Calculate power and display result
+        BigDecimal output = calcPow(n, exp);
+        System.out.println("Output: " + output);
+
+        //Best Practice: Closing the scanner to prevent resource leaks and other issues
+        in.close();
+    }
+    //Best Practice: I utilized "calcPow" here as a separate method instead of incorporating it in the main method in order to enhance readability    
+    //Method to calculate the power of a number
+        static BigDecimal calcPow(BigDecimal n, BigDecimal exp){
+         //Best Practice: I used this function so that the program can correctly produce results
+        //convert the BigDecimal into an int value
+        return n.pow(exp.intValue());
+    }
+}
+
